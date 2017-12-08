@@ -9,21 +9,17 @@
 		<h1>BH Video Summaries</h1>
 		<table id="myTable"></table>
 		<script>
-var temp = [
- {
-   "date": "7/13/10",
-   "title": "Boko Haram Leader Gives Condolences for Slain ISI Leaders",
-   "Transcript": true,
-   "Group": "Shekau",
-   "Description": "",
-   "Time": null
- }];
+			var temp = [
+			 {
+			   "date": "7/13/10",
+			   "title": "Boko Haram Leader Gives Condolences for Slain ISI Leaders",
+			   "Transcript": true,
+			   "Group": "Shekau",
+			   "Description": "",
+			   "Time": null
+			 }];
 			$(document).ready(function(){
-				$.getJSON('./data.json').done(function(data){
-					var rows = data['response'];
-					console.log(rows);
-					$('#myTable').DataTable( {data: temp} );
-				});
+				$('#myTable').DataTable( {data: temp} );
 			});
 		</script>
 	</body>
