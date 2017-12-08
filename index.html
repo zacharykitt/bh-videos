@@ -11,7 +11,8 @@
 		<script>
 			$(document).ready(function(){
 				$.getJSON('./data.json').done(function(data){
-					var rows = data['response']
+					var rows = data['response'];
+					console.log(rows);
 					$('#myTable').DataTable( {data: rows} );
 				});
 			});
