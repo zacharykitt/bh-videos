@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="http://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" />
+		<script src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" />
+	</head>
+	<body>
+		<table id="myTable"></table>
+		<script>
+			var data = null;
+			$(document).ready(function(){
+				$('#myTable').DataTable( {date: data} );
+			});
+		</script>
+	</body>
+</html>
