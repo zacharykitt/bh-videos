@@ -9,9 +9,11 @@
 		<h1>BH Video Summaries</h1>
 		<table id="myTable"></table>
 		<script>
-			var data = $.getJSON('./data.json');
 			$(document).ready(function(){
-				$('#myTable').DataTable( {date: data} );
+				$.getJSON('./data.json').done(function(data){
+					console.log(data);
+					$('#myTable').DataTable( {data: null} );
+				});
 			});
 		</script>
 	</body>
