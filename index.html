@@ -9,7 +9,7 @@
 		<h1>BH Video Summaries</h1>
 		<table id="myTable"></table>
 		<script>
-			var data = null;
+			var data = $.getJSON('./data.json');
 			$(document).ready(function(){
 				$('#myTable').DataTable( {date: data} );
 			});
