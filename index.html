@@ -15,7 +15,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h1>BH Video Summaries</h1>
-					<table id="data-table" class="nowrap table table-striped table-bordered" width="100%" cellspacing="0">
+					<table id="data-table" class="nowrap table table-striped table-bordered">
 						<thead>
 							<tr>
 								<th>date</th>
@@ -52,6 +52,7 @@
 			$(document).ready(function(){
 				$('#data-table').DataTable({
 					"ajax": "./data.json",
+					"scrollX": true,
 					"columnDefs": [{
       						"targets": [1, 4],
       						"render": $.fn.dataTable.render.ellipsis( 40, true )
