@@ -65,7 +65,8 @@
     						"visible": false,
 						"targets": [2, 11] 
 					}],
-					initComplete: function () {
+					"initComplete": function () {
+						console.log("init");
 						this.api().columns().every( function () {
 							var column = this;
 							var select = $('<select><option value=""></option></select>')
