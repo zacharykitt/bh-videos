@@ -41,7 +41,11 @@
 		<script>
 			$(document).ready(function(){
 				$('#data-table').DataTable({
-					"ajax": "./data.json"
+					"ajax": "./data.json",
+					"columnDefs": [{
+      						"targets": 1,
+      						"render": $.fn.dataTable.render.ellipsis( 17, true )
+					}]
 				});
 			});
 		</script>
