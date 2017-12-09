@@ -53,6 +53,10 @@
 				$('#data-table').DataTable({
 					"ajax": "./data.json",
 					"scrollX": true,
+					"aoColumnDefs": [{
+						"sType": "date", 
+						"aTargets": [0]
+					}],
 					"columnDefs": [{
       						"targets": [1, 4],
       						"render": $.fn.dataTable.render.ellipsis( 40, true )
