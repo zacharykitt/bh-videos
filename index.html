@@ -80,7 +80,7 @@
 			$(document).ready(function(){
 				$('#data-table').DataTable({
 					"ajax": "./data.json",
-					"scrollX": true,
+					// "scrollX": true,
 					"columnDefs": [{
       						"targets": [1, 4],
       						"render": $.fn.dataTable.render.ellipsis( 40, true )
