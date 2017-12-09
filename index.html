@@ -94,7 +94,7 @@
 						"targets": [2, 11] 
 					}],
 					"initComplete": function () {
-						this.api().columns().every( function () {
+						this.api().columns([3,6,12,13,14,15]).every( function () {
 							var column = this;
 							var select = $('<select><option value=""></option></select>')
 							    .appendTo( $(column.footer()).empty() )
