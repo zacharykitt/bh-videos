@@ -9,112 +9,86 @@
 		<script src="//code.jquery.com/jquery-1.12.4.js"></script>
 		<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 		<script src="//cdn.datatables.net/plug-ins/1.10.16/dataRender/ellipsis.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 	</head>
 	<body>
+		<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12">
-					<h1>BH Video Summaries</h1>
-					<table id="data-table" class="nowrap table table-striped table-bordered table-hover">
-						<thead>
-							<tr>
-								<th>date</th>
-								<th>title</th>
-								<th>transcript</th>
-								<th>group</th>
-								<th>description</th>
-								<th>time</th>
-								<th>platform</th>
-								<th>arabic</th>
-								<th>hausa</th>
-								<th>english</th>
-								<th>french</th>
-								<th>undefined</th>
-								<th>target</th>
-								<th>imagery</th>
-								<th>purpose</th>
-								<th>category</th>
-								<th>critique gov</th>
-								<th>make demand</th>
-								<th>assert ideology</th>
-								<th>claim/support attack</th>
-								<th>execution</th>
-								<th>make threat</th>
-								<th>affiliation to IS</th>
-								<th>claim to leadership</th>
-							</tr>
-						</thead>
-						<tfoot>
-							<tr>
-								<th>date</th>
-								<th>title</th>
-								<th>transcript</th>
-								<th>group</th>
-								<th>description</th>
-								<th>time</th>
-								<th>platform</th>
-								<th>arabic</th>
-								<th>hausa</th>
-								<th>english</th>
-								<th>french</th>
-								<th>undefined</th>
-								<th>target</th>
-								<th>imagery</th>
-								<th>purpose</th>
-								<th>category</th>
-								<th>critique gov</th>
-								<th>make demand</th>
-								<th>assert ideology</th>
-								<th>claim/support attack</th>
-								<th>execution</th>
-								<th>make threat</th>
-								<th>affiliation to IS</th>
-								<th>claim to leadership</th>
-							</tr>
-						</tfoot>
-					</table>
-				</div><!-- .col-md-12 -->
-			</div><!-- .row -->
-		</div><!-- .container-fluid -->
-		<script>
-			$(document).ready(function(){
-				$('#data-table').DataTable({
-					"ajax": "./data.json",
-					// "scrollX": true,
-					"columnDefs": [{
-      						"targets": [1, 4],
-      						"render": $.fn.dataTable.render.ellipsis( 40, true )
-						},
-						{
-						"sType": "date",
-						"aTargets": [0]
-						},
-						{
-    						"visible": false,
-						"targets": [2, 11] 
-					}],
-					"initComplete": function () {
-						this.api().columns([3,6,12,13,14,15]).every( function () {
-							var column = this;
-							var select = $('<select><option value="">' + $(column.header()).text() + '</option></select>')
-							    .appendTo( $(column.footer()).empty() )
-							    .on( 'change', function () {
-								var val = $.fn.dataTable.util.escapeRegex(
-								    $(this).val()
-								);
-
-								column
-								    .search( val ? '^'+val+'$' : '', true, false )
-								    .draw();
-							    } );
-
-							column.data().unique().sort().each( function ( d, j ) {
-							    select.append( '<option value="'+d+'">'+d+'</option>' );
-							} );
-						} );
-					}
-				});
-			});
-		</script>
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Brand</a>
+		 </div>
+		 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li>
+	        <li><a href="/about.html">About Us</a></li>
+	        <li><a href="/database.html">Database</a></li>
+	        <li><a href="/casestudies.html">Case Studies</a></li>
+       	</li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+	<center>
+	<img src="https://i.imgur.com/rEGTeqn.png" class="img-fluid" alt="Responsive image">
+		<div class="container-fluid">
+		<div class="row">
+	</center>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+    <center>
+    <br/>
+    <br/>
+      <img src="https://i.imgur.com/qplhnCd.png">
+      <div class="caption">
+        <h3>Video Database</h3>
+        <p>Database of Boko Haram video and key features such as languages used, platform in which it was released, imagery utilized and key themes in messaging </p>
+        <p><a href="database.html" class="btn btn-default" role="button">View More</a></p>
+    </center>
+      </div>
+    </div>
+ <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+    <center>
+    <br/>
+    <br/>
+      <img src="https://i.imgur.com/cHpgWwf.png">
+      <div class="caption">
+        <h3>Case Studies</h3>
+        <p>Collection of case studies on extremist groups and counter-messaging  </p>
+        <p><a href="#" class="btn btn-default" role="button">View More</a></p>
+    </center>
+      </div>
+    </div>
+ <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+    <center>
+    <br/>
+    <br/>
+      <img src="https://i.imgur.com/Kr18HNS.png">
+      <div class="caption">
+        <h3>Geospatial Data</h3>
+        <p> Map of attacks conducted by Boko Haram and affiliates </p>
+        <p><a href="#" class="btn btn-default" role="button">View More</a></p>
+    </center>
+      </div>
+    </div>
+  </div>
+</div>
 	</body>
 </html>
